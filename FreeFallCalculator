@@ -1,0 +1,27 @@
+import sys
+
+RED   = "\033[1;31m"  
+BLUE  = "\033[1;34m"
+CYAN  = "\033[1;36m"
+GREEN = "\033[0;32m"
+RESET = "\033[0;0m"
+BOLD    = "\033[;1m"
+REVERSE = "\033[;7m"
+
+sys.stdout.write(RED)
+print("Please note that all measurements are automated.")
+print("Please also note that all measurements are made with relation to downwards being positive. Please update your values accrodingly.")
+print("Programming has limits based upon Python limits on integer values.")
+sys.stdout.write(RESET)
+height = int(input("Height in meters: "))
+mass = int(input("Mass of object in kilograms: "))
+g = float(input("Desired value of g: "))
+initialVelocity = int(input("Initial velocity of object: "))
+time = (2*(height-initialVelocity)/g)**(0.5)
+initPotentialEnergy = mass*g*height
+finalVelocity = ((initialVelocity**2)+(2*g*height))**(0.5)
+finalMomentum = mass*finalVelocity
+print('The time your object took to reach the bottom is ' + str(time) + ' seconds.')
+print('Your object originally had ' +  str(initPotentialEnergy) + ' Joules of potential energy, which was dissipated into kinetic energy throughout it\'s free fall')
+print('Your object, just before touching the ground had a velocity of ' + str(finalVelocity) + ' meters per second.')
+print('Because of this, your object had a momentum of ' + str(finalMomentum) + ' (kg * m)/s just before touching the ground.False')
