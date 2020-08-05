@@ -1,0 +1,27 @@
+import sys
+
+RED   = "\033[1;31m"  
+BLUE  = "\033[1;34m"
+CYAN  = "\033[1;36m"
+GREEN = "\033[0;32m"
+RESET = "\033[0;0m"
+BOLD    = "\033[;1m"
+REVERSE = "\033[;7m"
+
+sys.stdout.write(RED)
+print("Please note that all measurements are automated.")
+print("Please also note that all measurements are made with relation to upwards being positive. Please update your values accordingly.")
+print("Programming has limits based upon Python limits on integer values.")
+sys.stdout.write(RESET)
+initialHeight = float(input("Initial Height of the Object: "))
+finalHeight = float(input("Final Height of the Object: "))
+g = float(input("Selected value of g: "))
+mass = float(input("Mass of the Object (kg): "))
+
+initPotentialEnergy = mass*g*initialHeight
+finalPotentialEnergy = mass*g*finalHeight
+distance = finalHeight-initialHeight
+
+print('Your object started out with initially ' + str(initPotentialEnergy) + ' joules of potential energy.')
+print('After that, your object moved a distance of ' + str(distance) + ' meters.')
+print('This caused your object to have a final gravitional potential energy value of ' + str(finalPotentialEnergy) + ' joules.')
