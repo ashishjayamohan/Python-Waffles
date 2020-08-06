@@ -1,0 +1,4 @@
+mass = float(input("Mass of Object in Kilograms: "))
+velocity = float(input("Velocity of Object in m/s: "))
+kinetic = 0.5*mass*(velocity**2)
+print('Your object has ' + str(kinetic) + ' joules of kinetic energy.')
