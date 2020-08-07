@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt 
+import numpy as np 
+# x = [1,2,3]
+# y = [2,4,1] 
+
+def createList(r1, r2): 
+  return np.arange(r1, r2+1, 1) 
+
+r1, r2 = -20, 20
+x = createList(r1, r2)
+y=[]
+
+mass = int(input("Mass of object: "))
+for i in x:
+  y.append(0.5*mass*int(i)**2)
+
+plt.plot(x, y) 
+plt.xlabel('x - axis') 
+plt.ylabel('y - axis') 
+plt.title('Relation of v to Kinetic Energy') 
+plt.show() 
