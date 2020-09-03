@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+from scipy.stats import skew
+file = open("")
+
+x = []
+for line in file:
+    if(line != ".\n"):
+        x.append(float(line.strip("\n")))
+plt.hist(x, bins = 30)
+plt.title(label="Average Score Distribution")
+plt.show()
+print (skew(x))
